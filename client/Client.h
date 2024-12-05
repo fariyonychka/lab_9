@@ -2,7 +2,7 @@
 #include <iostream>
 #include <windows.h>
 #include <string>
-#include <msclr/marshal_cppstd.h> // пїЅпїЅпїЅ marshal_as
+#include <msclr/marshal_cppstd.h> // Для marshal_as
 using namespace msclr::interop; 
 bool continueSearch = true;
 HANDLE hPipe = INVALID_HANDLE_VALUE;
@@ -197,7 +197,7 @@ namespace client {
 
 		void InitializeTimer() {
 			connectionTimer = gcnew System::Windows::Forms::Timer();
-			connectionTimer->Interval = 3000; 
+			connectionTimer->Interval = 5000; 
 			connectionTimer->Tick += gcnew EventHandler(this, &Client::CheckConnection);
 			connectionTimer->Start(); 
 		}
@@ -235,13 +235,13 @@ namespace client {
 				}
 				std::wstring data(buffer, bytesRead / sizeof(WCHAR));
 
-				// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+				// Перевіряємо, чи отримано повідомлення про завершення передачі
 				if (data == L"EndOfFileList") {
-					// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+					// Просто зупиняємо цикл без виведення повідомлення
 					break;
 				}
 				else if (data.find(L"Server: Error") != std::wstring::npos) {
-					// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+					// Виводимо тільки повідомлення про помилку
 					if (textBoxForLog->InvokeRequired) {
 						textBoxForLog->Invoke(gcnew Action<System::String^>(this, &Client::UpdateLog), gcnew String(data.c_str()));
 					}
@@ -250,7 +250,7 @@ namespace client {
 					}
 				}
 				else {
-					// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+					// Виводимо всі інші повідомлення на екран
 					if (textBoxForLog->InvokeRequired) {
 						textBoxForLog->Invoke(gcnew Action<System::String^>(this, &Client::UpdateLog), gcnew String(data.c_str()));
 					}

@@ -1,3 +1,0 @@
-C:\Users\bilej\Desktop\Папки\УНІВЕР\2 курс\3_семестр\ОС\lab_9\lab_9\Client\client\x64\Debug\client.vcxproj.AssemblyReference.cache
-C:\Users\bilej\Desktop\Папки\УНІВЕР\2 курс\3_семестр\ОС\lab_9\lab_9\Client\client\x64\Debug\client.Client.resources
-C:\Users\bilej\Desktop\Папки\УНІВЕР\2 курс\3_семестр\ОС\lab_9\lab_9\Client\client\x64\Debug\client.vcxproj.GenerateResource.cache
