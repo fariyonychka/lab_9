@@ -1,0 +1,22 @@
+# Visual Studio файли
+.vs/
+*.vcxproj.user
+*.vcxproj.filters
+*.db
+*.ipch/
+*.tlog/
+*.obj
+*.pdb
+*.exe
+*.ilk
+*.log
+
+# CMake файли
+CMakeFiles/
+CMakeCache.txt
+
+# Інші непотрібні файли
+*.suo
+*.user
+*.idb
+*.opendb
