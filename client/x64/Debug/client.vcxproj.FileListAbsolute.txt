@@ -1,0 +1,4 @@
+D:\client\x64\Debug\client.vcxproj.AssemblyReference.cache
+D:\client\x64\Debug\client.Client.resources
+D:\client\x64\Debug\client.vcxproj.GenerateResource.cache
+D:\client\x64\Debug\client.exe

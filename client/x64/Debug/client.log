@@ -1,0 +1,4 @@
+﻿  Client.cpp
+D:\client\Client.h(208,52): warning C4267: 'argument': conversion from 'size_t' to 'DWORD', possible loss of data
+  Client.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  client.vcxproj -> D:\client\x64\Debug\client.exe

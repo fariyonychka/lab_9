@@ -1,0 +1,8 @@
+﻿  Client.cpp
+C:\Users\bilej\Desktop\Папки\УНІВЕР\2 курс\3_семестр\ОС\lab_9\lab_9\Client\Client.h(208,52): warning C4267: 'argument': conversion from 'size_t' to 'DWORD', possible loss of data
+  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+  Generating Code...
+  Client.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  client.vcxproj -> C:\Users\bilej\Desktop\Папки\УНІВЕР\2 курс\3_семестр\ОС\lab_9\lab_9\Client\x64\Debug\client.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.
